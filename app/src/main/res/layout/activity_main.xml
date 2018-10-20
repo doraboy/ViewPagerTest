@@ -8,20 +8,62 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     >
-
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Page1"
+            android:onClick="gotoPage1"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Page2"
+            android:onClick="gotoPage2"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Page3"
+            android:onClick="gotoPage3"
+            />
+    </LinearLayout>
+    <!--
     <TextView
         android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="我是標題列:Hello World!"
         android:textSize="24sp"
+        android:background="#999"
+        android:visibility="gone"
         />
+      -->
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+        <!--
+        <android.support.v4.view.PagerTitleStrip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </android.support.v4.view.PagerTitleStrip>
+        -->
+        <android.support.v4.view.PagerTabStrip
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </android.support.v4.view.PagerTabStrip>
 
     </android.support.v4.view.ViewPager>
 
